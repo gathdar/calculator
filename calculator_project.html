@@ -15,7 +15,7 @@
 	</div>
 	
 	<div class="container">
-		<div class="answer">
+		<div class="answer" id="answer">
 			<p>0.00</p>
 		</div><br><br><br>
 		
@@ -47,18 +47,14 @@
 	</div>
 
 	<script>
-		function calculate();
+		function calculate() {
 			var num1 = document.getElementById("num1");
 			var num2 = document.getElementById("num2");
 			var operation = document.getElementsByName("operation").value;
-			var total = 0;
-			if (operation == "+") {
-				total = num1 + num2;
-			} else {
-				total = 0;
-			}
-			document.getElementsByClass("answer").innerHTML = total;
+			var total = num1 + num2;
+			var compute = document.getElementById("answer").innerHTML = "num1";
 			num1.value = ""; num2.value= "";
+			}
 			
 	</script>
 	
