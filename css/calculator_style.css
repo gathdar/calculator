@@ -1,0 +1,27 @@
+body {
+	background-color: #ced8e8;
+}
+
+.container {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 350px;
+	height: 450px;
+	background-color: #fff;
+	border: 5px solid black;
+	border-radius: 5%;
+}
+
+.answer {
+	display: block;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	height: 50px;
+	background-color: #dbdbdb;
+	border: 2px solid black;
+	text-align: right;
+	text-size: 15px;
+}
