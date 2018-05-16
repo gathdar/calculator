@@ -17,19 +17,51 @@
 	<div class="container">
 		<div class="answer">
 			<p>0.00</p>
-		</div>
+		</div><br><br><br>
 		
 		<div class="numbers">
-		</div>
+		Number1: <input type="number" id="num1" size="25"><br><br>
+		Number2: <input type="number" id="num2" size="25"><br><br>
+		</div><br><br>
 		
 		<div class="radio_buttons">
-		</div>
+			<form>
+				<input type="radio" id="radio_1" name="operation" value="+">
+					<label for="radio_1">+</label>
+				<input type="radio" id="radio_2" name="operation" value="-">
+					<label for="radio_1">-</label>
+				<input type="radio" id="radio_3" name="operation" value="*">
+					<label for="radio_1">*</label>
+				<input type="radio" id="radio_4" name="operation" value="/">
+					<label for="radio_1">/</label>
+			</form> 
+		</div><br><br>
 		
-		<div class="calculate_clear"
+		<div class="calculate_clear">
+			<form>
+				<button id="calculate"onclick="calculate()">Calculate!</button>
+				<button id="clear">Clear</button>
+			</form>
 		</div>
 		
 	</div>
 
+	<script>
+		function calculate();
+			var num1 = document.getElementById("num1");
+			var num2 = document.getElementById("num2");
+			var operation = document.getElementsByName("operation").value;
+			var total = 0;
+			if (operation == "+") {
+				total = num1 + num2;
+			} else {
+				total = 0;
+			}
+			document.getElementsByClass("answer").innerHTML = total;
+			num1.value = ""; num2.value= "";
+			
+	</script>
+	
 </body>
 
 </html>
